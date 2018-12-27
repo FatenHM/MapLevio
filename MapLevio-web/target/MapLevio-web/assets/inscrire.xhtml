@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+            xmlns:h="http://java.sun.com/jsf/html">
+	
+<head>
+
+</head>
+<body>
+		<h:panelGroup columns="2">
+			<h:form>
+				<table>
+					
+					<tr>
+						<td><h:outputText value="Username"></h:outputText></td>
+
+						<td><h:inputText value="#{inscriptionBean.userName}"></h:inputText></td>
+
+					</tr>
+					<tr>
+						<td><h:outputText value="Password"></h:outputText></td>
+						<td><h:inputSecret value="#{inscriptionBean.password}"></h:inputSecret></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="E-mail"></h:outputText></td>
+						<td><h:inputText value="#{inscriptionBean.email}"></h:inputText></td>
+					</tr>
+					
+					<tr>
+            <h:outputText value="Role" ></h:outputText>
+            </tr>
+            <tr> 
+          <h:selectOneMenu value="#{inscriptionBean.discriminator}">
+                <f:selectItem itemValue="choose" itemLabel="Client" />
+                <f:selectItem itemValue="choose" itemLabel="Resource" />
+                </h:selectOneMenu>
+            </tr>
+            <tr>
+       <h:commandButton id ="btn" action="#{inscriptionBean.inscription()}" value="Inscription" />
+<h:message for="btn"/>
+</tr>
+					</table>
+					</h:form>
+					</h:panelGroup>
+					</body> 
+					
+					
+					</html>
+					
+		
+				

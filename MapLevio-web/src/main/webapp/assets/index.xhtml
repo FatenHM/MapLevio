@@ -1,0 +1,480 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+            xmlns:h="http://java.sun.com/jsf/html"
+            xmlns:my="http://java.sun.com/jsf/composite/my">
+            
+            <head>
+
+     <title>MAP-LEVIO</title>
+
+     <meta charset="UTF-8"></meta>
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge"></meta>
+     <meta name="description" content=""></meta>
+     <meta name="keywords" content=""></meta>
+     <meta name="author" content=""></meta>
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
+
+     <link rel="stylesheet" href="css/bootstrap.min.css"></link>
+     <link rel="stylesheet" href="css/font-awesome.min.css"></link>
+     <link rel="stylesheet" href="css/owl.carousel.css"></link>
+     <link rel="stylesheet" href="css/owl.theme.default.min.css"></link>
+
+   
+     <link rel="stylesheet" href="css/templatemo-style.css"></link>
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="#" class="navbar-brand">MAP-LEVIO</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="#top" class="smoothScroll">Home</a></li>
+                         <li><a href="#about" class="smoothScroll">About</a></li>
+                         <li><a href="#team" class="smoothScroll">Projects</a></li>
+                         <li><a href="#courses" class="smoothScroll">Resources</a></li>
+                         <li><a href="#testimonial" class="smoothScroll">Organigrams</a></li>
+                         <li><a href="#contact" class="smoothScroll">Contact</a></li>
+                       
+                    </ul>
+
+                    
+           
+		<h:panelGroup  class="nav navbar-nav navbar-right">
+			<h:form>
+				<h:outputText
+					value="Hi #{loginBean.user.userName} !" />
+                <h:commandLink value="logout" action="#{loginBean.doLogout()}"/>
+			</h:form>
+			
+		        </h:panelGroup>
+		     
+               </div>
+
+
+
+          </div>
+          
+     </section>
+
+
+     <!-- HOME -->
+     <section id="home">
+          <div class="row">
+
+                    <div class="owl-carousel owl-theme home-slider">
+                         <div class="item item-first">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-6 col-sm-12">
+                                             
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="item item-second">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-6 col-sm-12">
+                                             
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="item item-third">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-6 col-sm-12">
+                                          
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+          </div>
+     </section>
+
+
+     <!-- FEATURE -->
+     <section id="feature">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="feature-thumb">
+                              <span>01</span>
+                              <h3>Business consulting</h3>
+                              <p>Levio works with you from idea generation to benefits realization through execution of transformation programs and projects aimed at :
+
+                                         Improved sales
+                                         Better customer service
+                                         Modified or streamlined business or IT processes
+                                         New or upgraded technological solutions.</p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="feature-thumb">
+                              <span>02</span>
+                              <h3>Program and project management</h3>
+                              <p>LEVIO works alongside its clients in realizing major programs and projects.</p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="feature-thumb">
+                              <span>03</span>
+                              <h3>Software, development, configuration and integration</h3>
+                              <p>Selecting software packages to support your business processes can be a cost-effective solution, but their integration raises challenges that Levio can help you tackle.</p>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- ABOUT -->
+     <section id="about">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-12">
+                         <div class="about-info">
+                              <h2>LEVIO accompanies you from the idea to the benefit</h2>
+
+                              <figure>
+                                   <span><i class="fa fa-users"></i></span>
+                                   <figcaption>
+                                        <h3>Program And Project Management</h3>
+                                        <p>Levio helps you lead, manage, coach and support your project teams.</p>
+                                   </figcaption>
+                              </figure>
+
+                              <figure>
+                                   <span><i class="fa fa-certificate"></i></span>
+                                   <figcaption>
+                                        <h3>Innovation Center</h3>
+                                        <p>Levio Innovation Center’s mission is to leverage our know-how to better meet business needs by fostering industry-specific innovation, 
+                                           such as for the insurance and financial sector..</p>
+                                   </figcaption>
+                              </figure>
+
+                              <figure>
+                                   <span><i class="fa fa-bar-chart-o"></i></span>
+                                   <figcaption>
+                                        <h3>Dashboard And Monitoring Management</h3>
+                                        <p>Tips, techniques, and trends on how to use dashboard technology to optimize business performance.</p>
+                                   </figcaption>
+                              </figure>
+                         </div>
+                    </div>
+
+                    <div class="col-md-offset-1 col-md-4 col-sm-12">
+                         <div class="entry-form">
+                              <form action="#" method="post">
+                                   <h2>Signup today</h2>
+                                   <input type="text" name="full name" class="form-control" placeholder="Full name"></input>
+
+                                   <input type="email" name="email" class="form-control" placeholder="Your email address"></input>
+
+                                   <input type="password" name="password" class="form-control" placeholder="Your password"></input>
+
+                                   <button class="submit-btn form-control" id="form-submit">Get started</button>
+                              </form>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- TEAM -->
+     <section id="team">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>Team</h2>
+                         </div>
+                    </div>
+
+                     <div class="col-md-2 col-sm-6 col-xs-12">
+                         <div class="team-thumb">
+                              <div class="team-image">
+                                   <img src="images/donia.jpg" class="img-responsive" alt=""></img>
+                              </div>
+                              <div class="team-info">
+                                   <h3>Donia Khiari</h3>
+                                   <span>Software engineer</span>
+                              </div>
+                              <ul class="social-icon">
+                              <li><a href="#" class="fa fa-google"></a></li>
+                               </ul>
+                         </div>
+                    </div>
+
+  <div class="col-md-2 col-sm-6 col-xs-12">                       
+    <div class="team-thumb">
+                              <div class="team-image">
+                                   <img src="images/faten.jpg" class="img-responsive" alt=""></img>
+                              </div>
+                              <div class="team-info">
+                                   <h3>Faten Hmouda</h3>
+                                   <span>IT engineer</span>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-google"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+  <div class="col-md-2 col-sm-6 col-xs-12">                         <div class="team-thumb">
+                              <div class="team-image">
+                                   <img src="images/karim.jpg" class="img-responsive" alt=""></img>
+                              </div>
+                              <div class="team-info">
+                                   <h3>Med Karim Fenni</h3>
+                                   <span>BI engineer</span>
+                              </div>
+                              <ul class="social-icon">
+                                                                 <li><a href="#" class="fa fa-google"></a></li>
+                              
+                                  
+                              </ul>
+                         </div>
+                    </div>
+
+  <div class="col-md-2 col-sm-6 col-xs-12">                         <div class="team-thumb">
+                              <div class="team-image">
+                                   <img src="images/omar.jpg" class="img-responsive" alt=""></img>
+                              </div>
+                              <div class="team-info">
+                                   <h3>Omar Hemdane</h3>
+                                   <span>Software engineer</span>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-google"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+                    
+                    
+                    
+  <div class="col-md-2 col-sm-6 col-xs-12">                       
+    <div class="team-thumb">
+                              <div class="team-image">
+                                   <img src="images/marouen.jpg" class="img-responsive" alt=""></img>
+                              </div>
+                              <div class="team-info">
+                                   <h3>Marouen Jlassi</h3>
+                                   <span>Software engineer</span>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-google"></a></li>
+
+                              </ul>
+                         </div>
+                    </div>
+                    
+
+  <div class="col-md-2 col-sm-6 col-xs-12">                       
+   <div class="team-thumb">
+                              <div class="team-image">
+                                   <img src="images/aymen.jpg" class="img-responsive" alt=""></img>
+                              </div>
+                              <div class="team-info">
+                                   <h3>Aymen Yahmadi</h3>
+                                   <span>Software engineer</span>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-google"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- Courses -->
+     <section id="courses">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>LEVIO-MAP-PROJECT<small>Upgrade your skills with newest tendance</small></h2>
+                         </div>
+
+                       <img src="images/levio1.jpg" class="img-fluid" alt="Responsive image" width="1150px" height="400px">
+                      </img>
+                      
+
+                         </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- TESTIMONIAL -->
+     
+     <!-- CONTACT -->
+     <section id="contact">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-12">
+                         <form id="contact-form" role="form" action="" method="post">
+                              <div class="section-title">
+                                   <h2>Contact us <small>we love conversations. let us talk!</small></h2>
+                              </div>
+
+                              <div class="col-md-12 col-sm-12">
+                                   <input type="text" class="form-control" placeholder="Enter full name" name="name"></input>
+                    
+                                   <input type="email" class="form-control" placeholder="Enter email address" name="email"></input>
+
+                                   <textarea class="form-control" rows="6" placeholder="Tell us about your message" name="message"></textarea>
+                              </div>
+
+                              <div class="col-md-4 col-sm-12">
+                                   <input type="submit" class="form-control" name="send message" value="Send Message"></input>
+                              </div>
+
+                         </form>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                         <div class="contact-image">
+                              <img src="images/contact-image.jpg" class="img-responsive" alt="Smiling Two Girls"></img>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>       
+
+
+     <!-- FOOTER -->
+     <footer id="footer">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Headquarter</h2>
+                              </div>
+                              <address>
+                                   <p>Z.I. Chotrana II B.P. 160
+                                    Technological Pole El Ghazela - Ariana 2083
+
+                                  </p>
+                              </address>
+
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+
+                              <div class="copyright-text"> 
+                                   <p>Copyright 2018 MAP by WeDev</p>
+                                   
+                                  
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Get in touch</h2>
+                              </div>
+                              <address>
+                                   <p>T (216) xx xxx xxx
+</p>
+                                   <p><a href="mailto:youremail.co">Email : contact@WeDev.tn</a></p>
+                              </address>
+
+                              <div class="footer_menu">
+                                   <h2>Quick Links</h2>
+                                   <ul>
+                                        <li><a href="#">Career</a></li>
+                                        <li><a href="#">Investor</a></li>
+                                        <li><a href="#">Terms  Conditions</a></li>
+                                        <li><a href="#">Refund Policy</a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                         <div class="footer-info newsletter-form">
+                              <div class="section-title">
+                                   <h2>Newsletter Signup</h2>
+                              </div>
+                              <div>
+                                   <div class="form-group">
+                                        <form action="#" method="get">
+                                             <input type="email" class="form-control" placeholder="Enter your email" name="email" id="email"></input>
+                                             <input type="submit" class="form-control" name="submit" id="form-submit" value="Send me"></input>
+                                        </form>
+                                        <span><sup>*</sup> Please note - we do not spam your email.</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+
+</body>
+            
+            
+            
+            
+      </html>
+      

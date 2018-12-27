@@ -1,0 +1,144 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+            xmlns:h="http://java.sun.com/jsf/html">
+            
+        <head>
+         
+           <link rel="stylesheet" href="css/login.css"></link>
+               <link rel="stylesheet" href="css/bootstrap.min.css"></link>
+     <link rel="stylesheet" href="css/font-awesome.min.css"></link>
+     <link rel="stylesheet" href="css/owl.carousel.css"></link>
+     <link rel="stylesheet" href="css/owl.theme.default.min.css"></link>
+
+   
+     <link rel="stylesheet" href="css/templatemo-style.css"></link>
+         
+         </head>
+
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+
+ 
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+     
+     
+     
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="#" class="navbar-brand">MAP-LEVIO</a>
+               </div>
+     </div>
+     </section>
+      <div class="center-block" style="width:450px">
+ <h:form id="form">
+<h:panelGrid columns="2">
+<h:outputText value="login" />
+<h:inputText value="#{loginBean.userName}" />
+<h:outputText  value="password"/>
+<h:inputSecret  value="#{loginBean.password}"/>
+<center><h:commandButton id ="btn" action="#{loginBean.doLogin()}" value="login" /></center>
+<h:message for="btn"/>
+</h:panelGrid>
+</h:form>
+</div>
+<div class="shadow"></div>
+
+
+ <footer id="footer">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Headquarter</h2>
+                              </div>
+                              <address>
+                                   <p>Z.I. Chotrana II B.P. 160
+                                    Technological Pole El Ghazela - Ariana 2083
+
+                                  </p>
+                              </address>
+
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+
+                              <div class="copyright-text"> 
+                                   <p>Copyright 2018 MAP by WeDev</p>
+                                   
+                                  
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Get in touch</h2>
+                              </div>
+                              <address>
+                                   <p>T (216) xx xxx xxx
+</p>
+                                   <p><a href="mailto:youremail.co">Email : contact@WeDev.tn</a></p>
+                              </address>
+
+                              <div class="footer_menu">
+                                   <h2>Quick Links</h2>
+                                   <ul>
+                                        <li><a href="#">Career</a></li>
+                                        <li><a href="#">Investor</a></li>
+                                        <li><a href="#">Terms  Conditions</a></li>
+                                        <li><a href="#">Refund Policy</a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                         <div class="footer-info newsletter-form">
+                              <div class="section-title">
+                                   <h2>Newsletter Signup</h2>
+                              </div>
+                              <div>
+                                   <div class="form-group">
+                                        <form action="#" method="get">
+                                             <input type="email" class="form-control" placeholder="Enter your email" name="email" id="email"></input>
+                                             <input type="submit" class="form-control" name="submit" id="form-submit" value="Send me"></input>
+                                        </form>
+                                        <span><sup>*</sup> Please note - we do not spam your email.</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+
+
+
+
+</body>
+
+           
+            
+</html>

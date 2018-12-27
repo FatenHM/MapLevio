@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+            xmlns:h="http://java.sun.com/jsf/html">
+            
+            
+            <head>
+            
+            
+            </head>
+            
+           <body>
+           
+ <h:form id="form">
+<h:panelGrid columns="2">
+<h:outputText value="nom" />
+<h:inputText value="#{projectBean.nom}" />
+<h:outputText  value="Date_Debut"/>
+<h:inputText  value="#{projectBean.deb_Date}"/>
+<h:outputText  value="Date_Fin"/>
+<h:inputText  value="#{projectBean.fin_Date}"/>
+<h:outputText  value="nombre_resources"/>
+<h:inputText  value="#{projectBean.nbreRessources}"/>
+
+<center><h:commandButton id ="btn" action="#{projectBean.addProjet()}" value="Add" /></center>
+<h:message for="btn"/>
+</h:panelGrid>
+</h:form>
+           
+           
+           
+           </body> 
+            
+            </html>
