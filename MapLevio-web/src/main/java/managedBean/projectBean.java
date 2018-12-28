@@ -3,6 +3,7 @@ package managedBean;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -18,15 +19,16 @@ import model.AspNetUser;
 import model.Project;
 import services.ProjetService;
 
-@ManagedBean
+@ManagedBean(name="projectBean")
 @SessionScoped
-public class projectBean implements Serializable {
+public class projectBean implements Serializable{
+	private static final long serialVersionUID= 1L;
 	
 	
 
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	
+	
 	private int projectId;
 	private Timestamp deb_Date;
 	private Timestamp fin_Date;
@@ -37,9 +39,9 @@ public class projectBean implements Serializable {
     private int type;
 	private AspNetUser aspNetUser1;
     @EJB
-	ProjetService   ProjectService; 
+	ProjetService ProjectService; 
     
-    private List<Project> projects;
+    List<Project> projects ;
     private Project project; 
     Project projectAjout=new Project();
     
@@ -51,6 +53,12 @@ public class projectBean implements Serializable {
     	projectAjout.setNbreRessources(nbreRessources);
 
     	
+    	
+    	
+    	
+    	
+    	
+    	
     	/*projectAjout.setSkilsId(skilsId);
     	projectAjout.setType(type);
     	projectAjout.setAspNetUser1(aspNetUser1);*/
@@ -58,10 +66,7 @@ public class projectBean implements Serializable {
     	int response=ProjectService.ajouterProject(projectAjout); }
     
     
-    
-	public List<Project> getProjects() {
-		return projects;
-	}
+  
 
 
 
@@ -120,19 +125,12 @@ public class projectBean implements Serializable {
 	public void setType(int type) {
 		this.type = type;
 	}
-	public ProjetService getProjectService() {
-		return ProjectService;
-	}
-	public void setProjectService(ProjetService projectService) {
-		ProjectService = projectService;
-	}
-	public List<Project> getProj() {
+
+	/*public List<Project> getProj() {
 		projects = ProjectService.getAllProjects(); 
 		return projects;
-	}
-	public void setProjects(List<Project> projects) {
-		this.projects = projects;
-	}
+	}*/
+
 	public Project getProject() {
 		return project;
 	}
@@ -145,9 +143,26 @@ public class projectBean implements Serializable {
 	public void setProjectAjout(Project projectAjout) {
 		this.projectAjout = projectAjout;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+
+
+
+
+
+
+	public List<Project> getPro() {
+		projects = ProjectService.getAllProjects();
+		return projects;
 	}
+
+
+
+
+
+
+	public void setProjects(List<Project> projects) {
+		this.projects = projects;
+	}
+	
 	
     
     

@@ -61,8 +61,8 @@ public class ProjetService implements ProjetRemote{
 
 	@Override
 	public List<Project> getAllProjects() {
-		return em.createQuery("from Project", Project.class).getResultList();
-		
+		List<Project> emp = em.createQuery("SELECT p FROM Project p", Project.class).getResultList();
+		return emp;
 	
 		
 	}

@@ -19,8 +19,10 @@ services\UserService.class
 model\Vacation.class
 model\Mandate.class
 model\AspNetRole.class
+services\SkilService.class
 model\Request.class
 model\Resource.class
 model\Project.class
+services\SkilRemote.class
 model\AspNetUserLoginPK.class
 model\Question.class

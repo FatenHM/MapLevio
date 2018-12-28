@@ -118,10 +118,17 @@
 								name="5.jpg" styleClass="float-left rounded-circle"
 								alt="User Image" />
 							<p>
-								#{userBean.user.firstName} #{userBean.user.lastName} <small
-									class="mb-5">#{userBean.user.email}</small> <a
-									href="template.jsf" class="btn btn-danger btn-sm">View
+								<small class="mb-5"></small>
+								 <a href="../template/template.jsf" class="btn btn-danger btn-sm">View
 									Profile</a>
+									
+									<h:form>
+				<h:outputText
+					value="Hi #{loginBean.user.userName} !" />
+                <h:commandLink value="logout" action="#{loginBean.doLogout()}"/>
+			</h:form>
+									
+									
 							</p></li>
 						<!-- Menu Body -->
 						<li class="user-body">
@@ -188,6 +195,7 @@
 				<ul class="treeview-menu">
 					<li><a href="../pages/getAllUsers2.jsf">All Users</a></li>
 					<li><a href="../pages/getAllUsers.jsf">Data tables</a></li>
+					<li><a href="../pages/projet.jsf">Projects</a></li>
 				</ul></li>
 			
 			

@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrought"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf">
+<h:head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<link rel="icon" href="../../images/favicon.ico" />
+
+
+	<title>Minimal Admin - Dashboard Data Tables</title>
+
+	<!-- Bootstrap 4.0-->
+	<h:outputStylesheet library="assets"
+		name="vendor_components/bootstrap/dist/css/bootstrap.min.css"></h:outputStylesheet>
+
+
+	<!-- Bootstrap 4.0-->
+	<h:outputStylesheet library="assets"
+		name="vendor_components/bootstrap/dist/css/bootstrap-extend.css"></h:outputStylesheet>
+
+
+	<!-- Font Awesome -->
+	<h:outputStylesheet library="assets"
+		name="vendor_components/font-awesome/css/font-awesome.min.css"></h:outputStylesheet>
+
+
+	<!-- Ionicons -->
+	<h:outputStylesheet library="assets"
+		name="vendor_components/Ionicons/css/ionicons.min.css"></h:outputStylesheet>
+
+
+	<!-- Theme style -->
+	<h:outputStylesheet library="css" name="master_style.css"></h:outputStylesheet>
+
+
+	<!-- minimal_admin Skins. Choose a skin from the css/skins
+	   folder instead of downloading all of them to reduce the load. -->
+	<h:outputStylesheet library="css" name="skins/_all-skins.css"></h:outputStylesheet>
+
+
+
+</h:head>
+<h:body class="hold-transition skin-black-light sidebar-mini">
+	<div class="wrapper">
+		<header class="main-header"> <!-- Logo --> <a
+			href="index.html" class="logo"> <!-- mini logo for sidebar mini 50x50 pixels -->
+			<span class="logo-mini"> <h:graphicImage library="images"
+					name="minimal.png" /> <img src="images/minimal.png" alt="" />
+		</span> <!-- logo for regular state and mobile devices --> <span
+			class="logo-lg"><b>Minimal</b>Admin</span>
+		</a> <!-- Header Navbar: style can be found in header.less --> <nav
+			class="navbar navbar-static-top"> <!-- Sidebar toggle button-->
+		<a href="#" class="sidebar-toggle" data-toggle="push-menu"
+			role="button"> <span class="sr-only">Toggle navigation</span>
+		</a>
+
+		<div class="navbar-custom-menu">
+			<ul class="nav navbar-nav">
+				<!-- User Account: style can be found in dropdown.less -->
+				<li class="dropdown user user-menu"><a href="#"
+					class="dropdown-toggle" data-toggle="dropdown"> <h:graphicImage
+							library="images" name="5.jpg"
+							styleClass="user-image rounded-circle" alt="User Image" />
+				</a>
+					<ul class="dropdown-menu scale-up">
+						<!-- User image -->
+						<li class="user-header"><h:graphicImage library="images"
+								name="5.jpg" styleClass="float-left rounded-circle"
+								alt="User Image" />
+								
+								
+								
+							<p>
+								<small class="mb-5"></small>
+								 <a href="../template/template.jsf" class="btn btn-danger btn-sm">View
+									Profile</a>
+									
+									<h:form>
+				<h:outputText
+					value="Hi #{loginBean.user.userName} !" />
+              
+			</h:form>
+									
+									
+							</p></li>
+						<!-- Menu Body -->
+						<li class="user-body">
+							<div class="row no-gutters">
+								<div class="col-12 text-left">
+									<a href="../template/template.jsf"><i
+										class="ion ion-person"></i> My Profile</a>
+								</div>
+								<div class="col-12 text-left">
+									<a href="#"><i class="ion ion-email-unread"></i> Inbox</a>
+								</div>
+								<div class="col-12 text-left">
+									<a href="#"><i class="ion ion-settings"></i> Setting</a>
+								</div>
+							</div> <!-- /.row -->
+						</li>
+						<!-- Menu Footer-->
+						<li class="user-footer">
+							<div class="pull-left">
+								<a href="#" class="btn btn-block btn-primary"> Lock</a>
+							</div>
+							<div class="pull-right">
+								<a href="../assets/login.jsf" class="btn btn-block btn-danger"> Log Out</a>
+							</div>
+						</li>
+					</ul></li>
+				<!-- Messages: style can be found in dropdown.less-->
+				
+
+
+
+				<!-- Control Sidebar Toggle Button -->
+				
+			</ul>
+		</div>
+		</nav> </header>
+		<!-- Left side column. contains the logo and sidebar -->
+		<aside class="main-sidebar"> <!-- sidebar: style can be found in sidebar.less -->
+		<section class="sidebar"> <!-- Sidebar user panel -->
+		<div class="user-panel">
+			<div class="image float-left">
+				<h:graphicImage library="images" name="5.jpg"
+					styleClass="rounded-circle" alt="User Image" />
+			</div>
+			<div class="info float-left">
+				<br />
+				<a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+			</div>
+			<!-- search form -->
+		
+			<!-- /.search form -->
+		</div>
+
+		<!-- sidebar menu: : style can be found in sidebar.less -->
+		<ul class="sidebar-menu" data-widget="tree">
+
+			<li class="active"><a href="../template/template.jsf"> <span>Dashboard</span>
+					<span class="pull-right-container"> </span>
+			</a></li>
+			<li class="treeview"><a href="#"> <span>Users</span> <span
+					class="pull-right-container"> </span>
+			</a>
+				<ul class="treeview-menu">
+					<li><a href="getAllUsers2.jsf">All Users</a></li>
+					<li><a href="getAllUsers.jsf">Export Users</a></li>
+				</ul></li>
+			<li class="active"><a href="../pages/projet.jsf"> <span>Projects</span>
+					<span class="pull-right-container"> </span>
+			</a></li>
+				<li class="active"><a href="../pages/toutescompetence.jsf"> <span>Skills</span>
+					<span class="pull-right-container"> </span>
+			</a></li>
+		</ul>
+		</section> <!-- /.sidebar -->
+		<div class="sidebar-footer">
+			<!-- item-->
+			<a href="#" class="link" data-toggle="tooltip" title=""
+				data-original-title="Settings"><i class="fa fa-cog fa-spin"></i></a>
+			<!-- item-->
+			<a href="#" class="link" data-toggle="tooltip" title=""
+				data-original-title="Email"><i class="fa fa-envelope"></i></a>
+			<!-- item-->
+			<a href="#" class="link" data-toggle="tooltip" title=""
+				data-original-title="Logout"><i class="fa fa-power-off"></i></a>
+		</div>
+		</aside>
+		<div class="content-wrapper">
+			<!-- Content Header (Page header) -->
+			<section class="content-header">
+			<h1>Skills</h1>
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#"><i
+						class="fa fa-dashboard"></i> Home</a></li>
+				<li class="breadcrumb-item"><a href="#">Skills</a></li>
+				<li class="breadcrumb-item active">list</li>
+			</ol>
+			</section>
+
+			<!-- Main content -->
+			<section class="content">
+			<div class="row">
+				<div class="col-12">
+
+					<div class="box">
+						<div class="box-header">
+							<h3 class="box-title">List Of Skills</h3>
+						</div>
+						<!-- /.box-header -->
+						<div class="box-body">
+
+							<!-- /.box-body -->
+						<div class="center-block" style="width:450px">
+                         <div class="box-body">
+  
+			
+				<h:dataTable id="example" value="#{skilBean.sk}" var="s" styleClass="table table-bordered table-hover display nowrap margin-top-10 table-responsive">
+					<h:column id="c1">
+						<f:facet name="header">
+							<h:outputText value="Name" />
+						</f:facet>
+						<h:outputText value="#{s.nameSkill}" />
+					</h:column >
+					<h:column id="c2">
+						<f:facet name="header">
+							<h:outputText value="Description" />
+						</f:facet>
+						<h:outputText value="#{s.description_Skill}" />
+					</h:column>
+
+			</h:dataTable>
+			
+		
+   </div></div>
+							<!-- /.box-body -->
+						</div>
+						<!-- /.box -->
+					</div>
+					<!-- /.col -->
+				</div>
+			</div>
+			<!-- /.row --> </section>
+			<!-- /.content -->
+		</div>
+
+
+
+
+		<!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+		<div class="control-sidebar-bg"></div>
+	</div>
+	<!-- ./wrapper -->
+
+	<!-- jQuery 3 -->
+	<h:outputScript library="assets"
+		name="vendor_components/jquery/dist/jquery.min.js"></h:outputScript>
+
+
+	<!-- popper -->
+	<h:outputScript library="assets"
+		name="vendor_components/popper/dist/popper.min.js"></h:outputScript>
+
+
+	<!-- Bootstrap 4.0-->
+	<h:outputScript library="assets"
+		name="vendor_components/bootstrap/dist/js/bootstrap.min.js"></h:outputScript>
+
+
+	<!-- DataTables -->
+	<h:outputScript library="assets"
+		name="vendor_components/datatables.net/js/jquery.dataTables.min.js"></h:outputScript>
+	<h:outputScript library="assets"
+		name="vendor_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></h:outputScript>
+
+
+	<!-- SlimScroll -->
+	<h:outputScript library="assets"
+		name="vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></h:outputScript>
+
+	<!-- FastClick -->
+	<h:outputScript library="assets"
+		name="vendor_components/fastclick/lib/fastclick.js"></h:outputScript>
+
+
+	<!-- minimal_admin App -->
+	<h:outputScript library="js" name="template.js"></h:outputScript>
+
+
+	<!-- minimal_admin for demo purposes -->
+	<h:outputScript library="js" name="demo.js"></h:outputScript>
+
+
+	<!-- This is data table -->
+	<h:outputScript library="assets"
+		name="vendor_plugins/DataTables-1.10.15/media/js/jquery.dataTables.min.js"></h:outputScript>
+
+
+	<!-- start - This is for export functionality only -->
+	<h:outputScript library="assets"
+		name="vendor_plugins/DataTables-1.10.15/extensions/Buttons/js/dataTables.buttons.min.js"></h:outputScript>
+	<h:outputScript library="assets"
+		name="vendor_plugins/DataTables-1.10.15/extensions/Buttons/js/buttons.flash.min.js"></h:outputScript>
+	<h:outputScript library="assets"
+		name="vendor_plugins/DataTables-1.10.15/ex-js/jszip.min.js"></h:outputScript>
+	<h:outputScript library="assets"
+		name="vendor_plugins/DataTables-1.10.15/ex-js/pdfmake.min.js"></h:outputScript>
+	<h:outputScript library="assets"
+		name="vendor_plugins/DataTables-1.10.15/ex-js/vfs_fonts.js"></h:outputScript>
+	<h:outputScript library="assets"
+		name="vendor_plugins/DataTables-1.10.15/extensions/Buttons/js/buttons.html5.min.js"></h:outputScript>
+	<h:outputScript library="assets"
+		name="vendor_plugins/DataTables-1.10.15/extensions/Buttons/js/buttons.print.min.js"></h:outputScript>
+	<!-- end - This is for export functionality only -->
+
+	<!-- minimal_admin for Data Table -->
+	<h:outputScript library="js" name="pages/data-table.js"></h:outputScript>
+
+
+
+
+
+
+
+
+</h:body>
+</html>

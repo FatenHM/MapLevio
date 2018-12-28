@@ -118,10 +118,17 @@
 								name="5.jpg" styleClass="float-left rounded-circle"
 								alt="User Image" />
 							<p>
-								#{userBean.user.firstName} #{userBean.user.lastName} <small
-									class="mb-5">#{userBean.user.email}</small> <a
-									href="template.jsf" class="btn btn-danger btn-sm">View
+								<small class="mb-5"></small>
+								 <a href="../template/template.jsf" class="btn btn-danger btn-sm">View
 									Profile</a>
+									
+									<h:form>
+				<h:outputText
+					value="Hi #{loginBean.user.userName} !" />
+              
+			</h:form>
+									
+									
 							</p></li>
 						<!-- Menu Body -->
 						<li class="user-body">
@@ -144,7 +151,7 @@
 								<a href="#" class="btn btn-block btn-primary"> Lock</a>
 							</div>
 							<div class="pull-right">
-								<a href="#" class="btn btn-block btn-danger"> Log Out</a>
+								<a href="../assets/login.jsf" class="btn btn-block btn-danger"> Log Out</a>
 							</div>
 						</li>
 					</ul></li>
@@ -182,15 +189,24 @@
 			<li class="active"><a href="template.jsf"> <span>Dashboard</span>
 					<span class="pull-right-container"> </span>
 			</a></li>
-			<li class="treeview"><a href="#"> <span>Users</span> <span
+			<li class="treeview"><a href="#"> <span>Users</span> 
+			<span
 					class="pull-right-container"> </span>
+		
 			</a>
 				<ul class="treeview-menu">
 					<li><a href="../pages/getAllUsers2.jsf">All Users</a></li>
 					<li><a href="../pages/getAllUsers.jsf">Data tables</a></li>
+					
 				</ul></li>
+				
+				<li class="active"><a href="../pages/projet.jsf"> <span>Projects</span>
+					<span class="pull-right-container"> </span>
+			</a></li>
 			
-			
+				<li class="active"><a href="../pages/toutescompetence.jsf"> <span>Skills</span>
+					<span class="pull-right-container"> </span>
+			</a></li>
 			
 				
 		</ul>
