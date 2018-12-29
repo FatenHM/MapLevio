@@ -20,7 +20,7 @@ public class Resource implements Serializable {
 	@Column(name="ResourceId")
 	private int resourceId;
 
-	private int contract;
+	private Contract contract;
 	
 	private String cv;
 	
@@ -69,7 +69,7 @@ public class Resource implements Serializable {
 	private List<Message> messages;
 
 	//bi-directional many-to-many association to Project
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(
 		name="ResourceProjects"
 		, joinColumns={
@@ -106,11 +106,12 @@ public class Resource implements Serializable {
 		this.resourceId = resourceId;
 	}
 
-	public int getContract() {
-		return this.contract;
+	
+	public Contract getContract() {
+		return contract;
 	}
 
-	public void setContract(int contract) {
+	public void setContract(Contract contract) {
 		this.contract = contract;
 	}
 

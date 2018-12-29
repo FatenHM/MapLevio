@@ -1,9 +1,12 @@
 package managedBean;
 
+import java.util.Set;
+
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 
@@ -21,17 +24,33 @@ public class loginBean {
 	private boolean loggedIn;
 	@EJB
 	UserService usersevice;
+	private AspNetUser users2 = new AspNetUser();
+	@ManagedProperty(value = "#{conectedBean.users}")
+	private Set<AspNetUser> myUsers;
 	
 	
 	
 	
-	
+	public Set<AspNetUser> getMyUsers() {
+		return myUsers;
+	}
+
+
+
+	public void setMyUsers(Set<AspNetUser> myUsers) {
+		this.myUsers = myUsers;
+	}
+
+
+
 	public String doLogin(){
 		String navigateTo="null";
 		user=usersevice.getuserBynameandPassword(userName, password);
 		System.out.println("ok1");
 		if(user!=null & user.getDiscriminator().equals("Client")){ 
 			System.out.println("ok2");
+			users2=user;
+			myUsers.add(user);
 			navigateTo="index?faces-redirect=true"; 
 		
 			loggedIn=true;
@@ -77,6 +96,18 @@ public class loginBean {
 
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+
+
+
+	public AspNetUser getUsers2() {
+		return users2;
+	}
+
+
+
+	public void setUsers2(AspNetUser users2) {
+		this.users2 = users2;
 	}
 
 

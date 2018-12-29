@@ -74,10 +74,13 @@
 								name="5.jpg" styleClass="float-left rounded-circle"
 								alt="User Image" />
 							<p>
-								#{userBean.user.firstName} #{userBean.user.lastName} <small
+								<small
 									class="mb-5">#{userBean.user.email}</small> <a
 									href="../template/template.jsf" class="btn btn-danger btn-sm">View
 									Profile</a>
+									<form>
+									<h:outputText value="Hi #{loginBean.user.userName} !" />
+									</form>
 							</p></li>
 						<!-- Menu Body -->
 						<li class="user-body">
@@ -96,11 +99,9 @@
 						</li>
 						<!-- Menu Footer-->
 						<li class="user-footer">
-							<div class="pull-left">
-								<a href="#" class="btn btn-block btn-primary"> Lock</a>
-							</div>
+						
 							<div class="pull-right">
-								<a href="#" class="btn btn-block btn-danger"> Log Out</a>
+								<a href="../assets/login.jsf" class="btn btn-block btn-danger"> Log Out</a>
 							</div>
 						</li>
 					</ul></li>
@@ -124,7 +125,7 @@
 			</div>
 			<div class="info float-left">
 				<br />
-				<a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+				<a href="#"><i class="fa fa-circle text-success"></i> #{loginBean.user.userName} </a>
 			</div>
 			<!-- search form -->
 		
@@ -137,14 +138,20 @@
 			<li class="active"><a href="../template/template.jsf"> <span>Dashboard</span>
 					<span class="pull-right-container"> </span>
 			</a></li>
-			<li class="treeview"><a href="#"> <span>Users</span> <span
+			<li class="treeview"><a href="#"> <span>Resources</span> <span
 					class="pull-right-container"> </span>
 			</a>
 				<ul class="treeview-menu">
-					<li><a href="getAllUsers2.jsf">All Users</a></li>
-					<li><a href="getAllUsers.jsf">Export Users</a></li>
+					<li><a href="getAllUsers2.jsf">Resources Reports</a></li>
+					<li><a href="getAllUsers.jsf">Export Reports</a></li>
 				</ul></li>
+				<li class="active"><a href="../pages/projet.jsf"> <span>Projects</span>
+					<span class="pull-right-container"> </span>
+			</a></li>
 			
+				<li class="active"><a href="../pages/toutescompetence.jsf"> <span>Skills</span>
+					<span class="pull-right-container"> </span>
+			</a></li>
 		</ul>
 		</section> <!-- /.sidebar -->
 		<div class="sidebar-footer">
@@ -197,36 +204,42 @@
 							<div class="box-body">
 								<h:dataTable id="example"
 									styleClass="table table-bordered table-hover display nowrap margin-top-10 table-responsive"
-									value="#{usersBean.userRoles}" var="r">
+									value="#{dashboardBean.resourceProjects}" var="rp">
 									<h:column id="c1">
-										<f:facet name="header">
-											<h:outputText value="Role" />
-										</f:facet>
-										<h:outputText value="#{r.role.name}" />
-									</h:column>
-									<h:column id="c2">
-										<f:facet name="header">
-											<h:outputText value="User Name" />
-										</f:facet>
-										<h:outputText value="#{r.myUser.userName}" />
-									</h:column>
-									<h:column id="c3">
 										<f:facet name="header">
 											<h:outputText value="First Name" />
 										</f:facet>
-										<h:outputText value="#{r.myUser.firstName}" />
+										<h:outputText value="#{rp.resource.first_name}" />
 									</h:column>
-									<h:column id="c4">
+									<h:column id="c2">
 										<f:facet name="header">
 											<h:outputText value="Last Name" />
 										</f:facet>
-										<h:outputText value="#{r.myUser.lastName}" />
+										<h:outputText value="#{rp.resource.last_name}" />
+									</h:column>
+									<h:column id="c3">
+										<f:facet name="header">
+											<h:outputText value="Project" />
+										</f:facet>
+										<h:outputText value="#{rp.project.nom}" />
+									</h:column>
+									<h:column id="c4">
+										<f:facet name="header">
+											<h:outputText value="Start Date" />
+										</f:facet>
+										<h:outputText value="#{rp.project.deb_Date}" />
 									</h:column>
 									<h:column id="c5">
 										<f:facet name="header">
-											<h:outputText value="Email" />
+											<h:outputText value="End Date" />
 										</f:facet>
-										<h:outputText value="#{r.myUser.email}" />
+										<h:outputText value="#{rp.project.fin_Date}" />
+									</h:column>
+									<h:column id="c6">
+										<f:facet name="header">
+											<h:outputText value="Contract Type" />
+										</f:facet>
+										<h:outputText value="#{rp.resource.contract}" />
 									</h:column>
 								</h:dataTable>
 							</div>

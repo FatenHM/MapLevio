@@ -35,7 +35,7 @@ public class inscriptionBean implements Serializable{
     	user.setPassword(password);
     	user.setUserName(userName);
    
-    	/*usersevice.inscription(new AspNetUser(discriminator,email,password,userName));*/
+    	usersevice.inscription(new AspNetUser(discriminator,email,password,userName));
     }
 		
     
