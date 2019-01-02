@@ -13,7 +13,7 @@ public interface DashboardServiceLocal {
 	public Long getNumberEmployees();
 	public Long getNumberEmployeesInMandates();
 	public Long getNumberEmployeesInterMandate();
-	public Long getNumberEmployeesAdministration() ;
-	public void reportResource(int ressourceId) ;
+	
+	
 
 }

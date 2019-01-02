@@ -15,7 +15,7 @@ import services.UserService;
 
 
 @ManagedBean
-@ApplicationScoped
+@SessionScoped
 public class loginBean {
 	
 	private AspNetUser user;
@@ -50,10 +50,11 @@ public class loginBean {
 		if(user!=null & user.getDiscriminator().equals("Client")){ 
 			System.out.println("ok2");
 			users2=user;
-			myUsers.add(user);
+			
 			navigateTo="index?faces-redirect=true"; 
 		
 			loggedIn=true;
+			myUsers.add(user);
 		
 			
 		 
@@ -79,6 +80,7 @@ public class loginBean {
 
 	public String doLogout(){
 		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+		myUsers.remove(user);
 		return "login?faces-redirect=true";
 	}
 	

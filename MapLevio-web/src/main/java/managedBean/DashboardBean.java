@@ -23,7 +23,7 @@ public class DashboardBean {
 	DashboardServiceLocal dashboardServiceLocal;
 	
 	private List<ResourceProject> resourceProjects = new ArrayList<ResourceProject>();
-
+	private Integer test;
 	public DashboardBean() {
 		// TODO Auto-generated constructor stub
 	}
@@ -32,6 +32,7 @@ public class DashboardBean {
 	public void init() {
 
 		setResourceProjects(prepareData(dashboardServiceLocal.getAll()));
+		
 	}
 
 	public List<ResourceProject> getResourceProjects() {
@@ -56,6 +57,34 @@ public class DashboardBean {
 			}
 		}
 		return resourceProjects;
+		
+	}
+
+	public Integer getTest() {
+		return test;
+	}
+
+	public void setTest(Integer test) {
+		this.test = test;
+	}
+	public String JsonWrite(){
+		return null;
+
+	}
+	public Long nbrfreelancer(){
+		return dashboardServiceLocal.getNumberFreelancers();
+		
+	}
+	public Long nbrEmploye(){
+		return dashboardServiceLocal.getNumberEmployees();
+		
+	}
+	public Long nbrMandates(){
+		return dashboardServiceLocal.getNumberEmployeesInMandates();
+		
+	}
+	public Long nbrInterMandates(){
+		return dashboardServiceLocal.getNumberEmployeesInterMandate();
 		
 	}
 

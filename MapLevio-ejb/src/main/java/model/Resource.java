@@ -19,7 +19,7 @@ public class Resource implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="ResourceId")
 	private int resourceId;
-
+	
 	private Contract contract;
 	
 	private String cv;
@@ -58,7 +58,7 @@ public class Resource implements Serializable {
 	@Column(name="SkilsId")
 	private String skilsId;
 
-	private int state;
+	private State state;
 
 	//bi-directional many-to-one association to Mandate
 	@OneToMany(mappedBy="resource")
@@ -235,11 +235,13 @@ public class Resource implements Serializable {
 		this.skilsId = skilsId;
 	}
 
-	public int getState() {
-		return this.state;
+	
+
+	public State getState() {
+		return state;
 	}
 
-	public void setState(int state) {
+	public void setState(State state) {
 		this.state = state;
 	}
 

@@ -14,14 +14,15 @@
 	<meta name="description" content="" />
 	<meta name="author" content="" />
 
+
 	<!-- <link rel="icon" href="images/favicon.ico">-->
 
-	<title>Minimal Admin - Dashboard</title>
+	<title>Map Levio Admin - Dashboard</title>
 	<!-- Bootstrap 4.0-->
 	<h:outputStylesheet library="assets"
 		name="vendor_components/bootstrap/dist/css/bootstrap.css"></h:outputStylesheet>
 	<!-- <link rel="stylesheet" href="assets/vendor_components/bootstrap/dist/css/bootstrap.css">-->
-
+   
 	<!-- Bootstrap 4.0-->
 	<h:outputStylesheet library="assets"
 		name="vendor_components/bootstrap/dist/css/bootstrap-extend.css"></h:outputStylesheet>
@@ -31,7 +32,8 @@
 	<h:outputStylesheet library="assets"
 		name="vendor_components/font-awesome/css/font-awesome.css"></h:outputStylesheet>
 	<!-- <link rel="stylesheet" href="assets/vendor_components/font-awesome/css/font-awesome.css">-->
-
+	<h:outputStylesheet library="assets"
+		name="vendor_components/font-awesome/css/font-awesome.min.css"></h:outputStylesheet>
 	<!-- ionicons -->
 	<h:outputStylesheet library="assets"
 		name="vendor_components/Ionicons/css/ionicons.css"></h:outputStylesheet>
@@ -97,7 +99,7 @@
 			<span class="logo-mini"> <h:graphicImage library="images"
 					name="minimal.png" /> <img src="images/minimal.png" alt="" />
 		</span> <!-- logo for regular state and mobile devices --> <span
-			class="logo-lg"><b>Minimal</b>Admin</span>
+			class="logo-lg"><b></b>Admin</span>
 		</a> <!-- Header Navbar: style can be found in header.less --> <nav
 			class="navbar navbar-static-top"> <!-- Sidebar toggle button-->
 		<a href="#" class="sidebar-toggle" data-toggle="push-menu"
@@ -137,19 +139,12 @@
 									<a href="template.jsf"><i class="ion ion-person"></i> My
 										Profile</a>
 								</div>
-								<div class="col-12 text-left">
-									<a href="#"><i class="ion ion-email-unread"></i> Inbox</a>
-								</div>
-								<div class="col-12 text-left">
-									<a href="#"><i class="ion ion-settings"></i> Setting</a>
-								</div>
+								
 							</div> <!-- /.row -->
 						</li>
 						<!-- Menu Footer-->
 						<li class="user-footer">
-							<div class="pull-left">
-								<a href="#" class="btn btn-block btn-primary"> Lock</a>
-							</div>
+							
 							<div class="pull-right">
 								<a href="../assets/login.jsf" class="btn btn-block btn-danger"> Log Out</a>
 							</div>
@@ -175,8 +170,10 @@
 					styleClass="rounded-circle" alt="User Image" />
 			</div>
 			<div class="info float-left">
+				
+				<h8> #{loginBean.user.userName} </h8>
 				<br />
-				<a href="#"><i class="fa fa-circle text-success"></i> #{loginBean.user.userName}</a>
+				<a href="#"><i class="fa fa-circle text-success"></i> Online </a>
 			</div>
 			<!-- search form -->
 		
@@ -229,7 +226,7 @@
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
 			<h1>
-				Dashboard <small>Control panel</small>
+				Dashboard <small>Admin</small>
 			</h1>
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="#"><i
@@ -254,31 +251,21 @@
 								class="profile-user-img rounded-circle img-fluid mx-auto d-block"
 								src="images/5.jpg" alt="User profile picture" />-->
 
-							<h3 class="profile-username text-center">#{userBean.user.firstName}
-								#{userBean.user.lastName}</h3>
+							<h3 class="profile-username text-center">#{loginBean.user.userName}</h3>
 
-							<p class="text-muted text-center">Accoubts Manager Jindal
-								Cop.</p>
+							<p class="text-muted text-center">Online</p>
 
-							<div class="row social-states">
-								<div class="col-6 text-right">
-									<a href="#" class="link"><i
-										class="ion ion-ios-people-outline"></i> 254</a>
-								</div>
-								<div class="col-6 text-left">
-									<a href="#" class="link"><i class="ion ion-images"></i> 54</a>
-								</div>
-							</div>
+							
 
 							<div class="row">
 								<div class="col-12">
 									<div class="profile-user-info">
 										<p>Email address</p>
-										<h6 class="margin-bottom">#{userBean.user.email}</h6>
+										<h6 class="margin-bottom">#{loginBean.user.email}</h6>
 										<p>Phone</p>
-										<h6 class="margin-bottom">#{userBean.user.phoneNumber}</h6>
+										<h6 class="margin-bottom">24286284</h6>
 										<p>Address</p>
-										<h6 class="margin-bottom">#{userBean.user.myadress}</h6>
+										<h6 class="margin-bottom">Rades</h6>
 										<!--<p class="margin-bottom">Social Profile</p>-->
 										<!--<div class="user-social-acount">
 											<button class="btn btn-circle btn-social-icon btn-facebook">
@@ -306,7 +293,7 @@
 						<!-- Chat box -->
 						<div class="box box-default">
 							<div class="box-header with-border">
-								<h3 class="box-title">Browser Usage</h3>
+								<h3 class="box-title">Statistics</h3>
 
 								<div class="box-tools pull-right">
 									<button type="button" class="btn btn-box-tool"
@@ -335,7 +322,7 @@
 											<li><i class="fa fa-circle-o text-green"></i> Pigistes</li>
 											<li><i class="fa fa-circle-o text-yellow"></i>Mandates</li>
 											<li><i class="fa fa-circle-o text-aqua"></i> InterMandates</li>
-											<li><i class="fa fa-circle-o text-red"></i> Administration</li>
+											
 											
 										</ul>
 									</div>
@@ -557,6 +544,36 @@
 
 	<script>
 	  $.widget.bridge('uibutton', $.ui.button);
+	</script>
+	<script type="text/javascript">
+	
+	var PieData        = [
+  	  {
+			value    : "#{dashboardBean.nbrEmploye()}",
+			color    : '#7460ee',
+			highlight: '#7460ee',
+			label    : 'Employes'
+		  },
+		  {
+			value    : "#{dashboardBean.nbrfreelancer()}",
+			color    : '#26C6DA',
+			highlight: '#26C6DA',
+			label    : 'Pigistes'
+		  },
+		  {
+			value    : "#{dashboardBean.nbrMandates()}",
+			color    : '#ffb22b',
+			highlight: '#ffb22b',
+			label    : 'Mandates'
+		  },
+		  {
+			value    : "#{dashboardBean.nbrInterMandates()}",
+			color    : '#1e88e5',
+			highlight: '#1e88e5',
+			label    : 'InterMandates'
+		  }
+		 
+];
 	</script>
 
 	<!-- popper -->
